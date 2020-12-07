@@ -10,11 +10,13 @@ function add(n1: number, n2: number, printResult: boolean, phrase: string) {
   return printResult ? console.log(phrase + result) : result;
 }
 
-const number1 = 5;
+let number1: number;
+number1 = 5;
+
 const number2 = 2.8;
 
 const printResult = true;
-const phrase = "Result is : ";
+let phrase = "Result is : ";
 
 const result = add(number1, number2, printResult, phrase);
 
