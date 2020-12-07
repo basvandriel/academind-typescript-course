@@ -2,7 +2,17 @@
 //   name: string;
 //   age: number;
 // }
-const person = { name: "Bas", age: 27, hobbies: ["Sports", "Cooking"] };
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+} = {
+  name: "Bas",
+  age: 27,
+  hobbies: ["Sports", "Cooking"],
+  role: [2, "author"],
+};
 
 let favoriteActivitites: string[];
 favoriteActivitites = ["Sports"];
