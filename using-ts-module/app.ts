@@ -1,37 +1,19 @@
-// const person: {
-//   name: string;
-//   age: number;
-// }
+// Union type
 
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
+function combine(input1: number | string, input2: number | string) {
+  let result;
 
-enum Role {
-  ADMIN,
-  READ_ONLY,
-  AUTHOR,
+  if (typeof input1 === "number" && typeof input2 === "number")
+    result = input1 + input2;
+  else result = input1.toString() + input2.toString();
+
+  return result;
 }
 
-const person = {
-  name: "Bas",
-  age: 27,
-  hobbies: ["Sports", "Cooking"],
-  role: Role.ADMIN,
-};
+const combinedAges = combine(30, 26);
 
-let favoriteActivitites: string[];
-favoriteActivitites = ["Sports"];
+console.log(combinedAges);
 
-let anyArray: any[];
-anyArray = ["Sports", 1, true];
+const combinedNames = combine("Bas", "Je");
 
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-}
-
-if (person.role === Role.ADMIN) {
-  console.log("READ ONLY USER");
-}
+console.log(combinedNames);
