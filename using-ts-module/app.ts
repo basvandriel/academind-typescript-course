@@ -1,8 +1,10 @@
 // Union type
 
+type Comineable = number | string;
+
 function combine(
-  input1: number | string,
-  input2: number | string,
+  input1: Comineable,
+  input2: Comineable,
   resultConversion: "as-number" | "as-text"
 ) {
   let result;
