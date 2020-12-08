@@ -10,3 +10,10 @@ input = "Bas";
 
 // With check it's possible
 if (typeof input === "string") username = input;
+
+// Doesn't return anything.
+function generateError(message: string, code: number): never {
+  throw { message, code };
+}
+
+generateError("An error occured!", 500);
