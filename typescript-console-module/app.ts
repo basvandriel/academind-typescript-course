@@ -1,3 +1,3 @@
 const username = "Bas";
 
-console.log(username);
+console.log(username + " Hey!");
